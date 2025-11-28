@@ -1,0 +1,69 @@
+:root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #D98E04;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+    --cor10: #536aff;
+
+    --paleta-site-1: #C4F2D0;
+    --paleta-site-2: #89E0A6;
+    --paleta-site-3: #00614A;
+    --paleta-site-4: #48048C;
+    --paleta-site-5: #8404D9;
+    --paleta-site-6: #7404BF;
+    --paleta-site-7: #460273;
+    --paleta-site-8: #0D0126;
+    --paleta-site-9: #001FE6;
+    --paleta-site-10: #000a47;
+
+    /* SLIDE */
+    --bg: #111;
+    --card-bg: #1b1b1b;
+    --gap: 100px;
+
+
+    --cor-fundo: #161516;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+/* DESCONTO H1 */.fundo-6{
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 7px;
+    position: relative;
+    top: -60px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: var(--fonte-menu);
+    font-weight: bold;
+    margin: auto;
+}
+
+.fundo-6 {
+    background-color: var(--cor-2);
+    color: var(--cor-1);
+}
+
+
+.wave-text-6 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+

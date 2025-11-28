@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Login</title>
+
+    <link rel="stylesheet" href="../css/login-page.css">
+
+</head>
+
+<body>
+
+    <div id="starsContainer"></div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal"><a href="index.html"
+                    style="text-decoration: none; color: rgb(255, 255, 255);">&times;</a></span>
+
+            <div class="modal-header">
+                <div class="modal-tab active" data-tab="login">Entrar</div>
+                <div class="modal-tab" data-tab="register">Cadastrar</div>
+            </div>
+
+            <div class="modal-body">
+
+                <!-- LOGIN -->
+                <form class="form active" id="loginForm">
+
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" id="loginEmail" placeholder="Seu e-mail" required>
+                        <p class="error-message" id="loginEmailError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Senha</label>
+                        <input type="password" id="loginPassword" placeholder="Sua senha" required>
+                        <p class="error-message" id="loginPasswordError"></p>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+
+                <!-- CADASTRO -->
+                <form class="form" id="registerForm">
+
+
+                    <div class="form-group">
+                        <label for="registerName">Nome Completo</label>
+                        <input type="text" id="registerName" placeholder="Seu nome completo" required>
+                        <p class="error-message" id="registerNameError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">E-mail</label>
+                        <input type="email" id="registerEmail" placeholder="Seu e-mail" required>
+                        <p class="error-message" id="registerEmailError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Senha</label>
+                        <input type="password" id="registerPassword" placeholder="Crie uma senha" required>
+                        <p class="error-message" id="registerPasswordError"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirmar Senha</label>
+                        <input type="password" id="registerConfirmPassword" placeholder="Confirme sua senha" required>
+                        <p class="error-message" id="registerConfirmPasswordError"></p>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Cadastrar</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--MODAL-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Criar estrelas dinamicamente
+            const starsContainer = document.getElementById('starsContainer');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                starsContainer.appendChild(star);
+            }
+
+            const modal = document.getElementById('loginModal');
+            const closeModalBtn = document.getElementById('closeModal');
+            const modalTabs = document.querySelectorAll('.modal-tab');
+            const forms = document.querySelectorAll('.form');
+
+            // 🔥 Fazer o modal abrir automaticamente
+            modal.style.display = 'block';
+
+            // --------- Seleciona automaticamente a aba correta ---------
+            const params = new URLSearchParams(window.location.search);
+            const tab = params.get("tab");  // login ou register
+
+            if (tab === "register") {
+                // Ativar aba Cadastrar
+                document.querySelector('.modal-tab[data-tab="login"]').classList.remove("active");
+                document.querySelector('.modal-tab[data-tab="register"]').classList.add("active");
+
+                document.getElementById("loginForm").classList.remove("active");
+                document.getElementById("registerForm").classList.add("active");
+            }
+
+            else if (tab === "login") {
+                // Ativar aba Login (padrão)
+                document.querySelector('.modal-tab[data-tab="register"]').classList.remove("active");
+                document.querySelector('.modal-tab[data-tab="login"]').classList.add("active");
+
+                document.getElementById("registerForm").classList.remove("active");
+                document.getElementById("loginForm").classList.add("active");
+            }
+
+
+
+            // 🔥 Alternar entre "Entrar" e "Cadastrar"
+            modalTabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+
+                    modalTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    forms.forEach(form => {
+                        form.classList.remove('active');
+                        if (form.id === `${tabId}Form`) {
+                            form.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // Fechar o carrinho ao clicar fora
+            document.addEventListener('click', function (event) {
+                if (cartDropdown && cartDropdown.classList.contains('active')) {
+                    if (!cartBtn.contains(event.target) && !cartDropdown.contains(event.target)) {
+                        console.log('Clicou fora - Fechando carrinho');
+                        cartDropdown.classList.remove('active');
+                    }
+                }
+            });
+
+
+        });
+    </script>
+
+
+
+
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+
+
+</body>
+
+</html>

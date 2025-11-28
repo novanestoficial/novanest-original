@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeitos de Onda em Texto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        /* Exemplo 1: Onda Simples com Transform */
+        .wave-text-1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .wave-text-1 span {
+            display: inline-block;
+            animation: wave1 3s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        
+        @keyframes wave1 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Exemplo 2: Onda com Distorção */
+        .wave-text-2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .wave-text-2 span {
+            display: inline-block;
+            animation: wave2 4s ease-in-out infinite;
+            animation-delay: calc(0.05s * var(--i));
+        }
+        
+        @keyframes wave2 {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+            75% {
+                transform: translateY(10px) rotate(-3deg);
+            }
+        }
+        
+        /* Exemplo 3: Onda com Cor */
+        .wave-text-3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+        }
+        
+        .wave-text-3 span {
+            display: inline-block;
+            animation: wave3 3s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+            background: linear-gradient(90deg, #ff00cc, #3333ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        @keyframes wave3 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+        
+        /* Exemplo 4: Onda Fluida com Filter */
+        .wave-text-4 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .wave-text-4::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #00d4ff;
+            animation: wave4 4s ease-in-out infinite;
+            z-index: -1;
+            filter: blur(2px);
+            opacity: 0.7;
+        }
+        
+        @keyframes wave4 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+        }
+        
+        /* Exemplo 5: Onda com Partículas */
+        .wave-text-5 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        
+        .wave-text-5 span {
+            display: inline-block;
+            position: relative;
+            animation: wave5 3s ease-in-out infinite;
+            animation-delay: calc(0.08s * var(--i));
+        }
+        
+        .wave-text-5 span::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 4px;
+            height: 4px;
+            background: #00d4ff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: particle 3s ease-in-out infinite;
+            animation-delay: calc(0.08s * var(--i));
+        }
+        
+        @keyframes wave5 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        @keyframes particle {
+            0%, 100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(0px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+        
+        /* Exemplo 6: Onda Sinusal Suave */
+        .wave-text-6 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .wave-text-6 span {
+            display: inline-block;
+            animation: wave6 4s ease-in-out infinite;
+            animation-delay: calc(0.05s * var(--i));
+        }
+        
+        @keyframes wave6 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(5px);
+            }
+            75% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* Exemplo 7: Onda com Brilho */
+        .wave-text-7 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00d4ff, 0 0 20px #00d4ff;
+        }
+        
+        .wave-text-7 span {
+            display: inline-block;
+            animation: wave7 3s ease-in-out infinite;
+            animation-delay: calc(0.07s * var(--i));
+        }
+        
+        @keyframes wave7 {
+            0%, 100% {
+                transform: translateY(0px);
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00d4ff, 0 0 20px #00d4ff;
+            }
+            50% {
+                transform: translateY(-20px);
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00d4ff, 0 0 40px #00d4ff;
+            }
+        }
+        
+        /* Exemplo 8: Onda com Gradiente Móvel */
+        .wave-text-8 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(90deg, #ff00cc, #3333ff, #00d4ff, #ff00cc);
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientMove 8s linear infinite;
+        }
+        
+        .wave-text-8 span {
+            display: inline-block;
+            animation: wave8 3s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        
+        @keyframes wave8 {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 400% 50%;
+            }
+        }
+        
+        .code-block {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border-left: 4px solid #00d4ff;
+        }
+        
+        .note {
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 4px solid #00d4ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .wave-text-1, .wave-text-2, .wave-text-3, 
+            .wave-text-4, .wave-text-5, .wave-text-6,
+            .wave-text-7, .wave-text-8 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Efeitos de Onda em Texto</h1>
+        
+        <!-- Exemplo 1 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-wave-square"></i> Onda Simples com Transform</h2>
+            <div class="wave-text-1" id="wave1"></div>
+            
+            <div class="code-block">
+                .wave-text span {<br>
+                &nbsp;&nbsp;animation: wave 3s ease-in-out infinite;<br>
+                &nbsp;&nbsp;animation-delay: calc(0.1s * var(--i));<br>
+                }<br><br>
+                @keyframes wave {<br>
+                &nbsp;&nbsp;0%, 100% { transform: translateY(0px); }<br>
+                &nbsp;&nbsp;50% { transform: translateY(-20px); }<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 2 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-water"></i> Onda com Distorção</h2>
+            <div class="wave-text-2" id="wave2"></div>
+            
+            <div class="code-block">
+                @keyframes wave2 {<br>
+                &nbsp;&nbsp;0%, 100% { transform: translateY(0px) rotate(0deg); }<br>
+                &nbsp;&nbsp;25% { transform: translateY(-15px) rotate(5deg); }<br>
+                &nbsp;&nbsp;75% { transform: translateY(10px) rotate(-3deg); }<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 3 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-palette"></i> Onda com Cor</h2>
+            <div class="wave-text-3" id="wave3"></div>
+            
+            <div class="code-block">
+                .wave-text-3 span {<br>
+                &nbsp;&nbsp;background: linear-gradient(90deg, #ff00cc, #3333ff);<br>
+                &nbsp;&nbsp;-webkit-background-clip: text;<br>
+                &nbsp;&nbsp;background-clip: text;<br>
+                &nbsp;&nbsp;color: transparent;<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 4 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-stream"></i> Onda Fluida com Filter</h2>
+            <div class="wave-text-4" data-text="ONDAS FLUIDAS" id="wave4">ONDAS FLUIDAS</div>
+            
+            <div class="code-block">
+                .wave-text-4::before {<br>
+                &nbsp;&nbsp;content: attr(data-text);<br>
+                &nbsp;&nbsp;animation: wave4 4s ease-in-out infinite;<br>
+                &nbsp;&nbsp;filter: blur(2px);<br>
+                &nbsp;&nbsp;opacity: 0.7;<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 5 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-sparkles"></i> Onda com Partículas</h2>
+            <div class="wave-text-5" id="wave5"></div>
+            
+            <div class="note">
+                <i class="fas fa-lightbulb"></i> Este efeito cria partículas que seguem o movimento das letras.
+            </div>
+        </div>
+        
+        <!-- Exemplo 6 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> Onda Sinusal Suave</h2>
+            <div class="wave-text-6" id="wave6"></div>
+            
+            <div class="code-block">
+                @keyframes wave6 {<br>
+                &nbsp;&nbsp;0%, 100% { transform: translateY(0px); }<br>
+                &nbsp;&nbsp;25% { transform: translateY(-10px); }<br>
+                &nbsp;&nbsp;50% { transform: translateY(5px); }<br>
+                &nbsp;&nbsp;75% { transform: translateY(-5px); }<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 7 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-sun"></i> Onda com Brilho</h2>
+            <div class="wave-text-7" id="wave7"></div>
+            
+            <div class="code-block">
+                .wave-text-7 {<br>
+                &nbsp;&nbsp;text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00d4ff;<br>
+                }<br><br>
+                .wave-text-7 span {<br>
+                &nbsp;&nbsp;animation: wave7 3s ease-in-out infinite;<br>
+                &nbsp;&nbsp;animation-delay: calc(0.07s * var(--i));<br>
+                }
+            </div>
+        </div>
+        
+        <!-- Exemplo 8 -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-gradient"></i> Onda com Gradiente Móvel</h2>
+            <div class="wave-text-8" id="wave8"></div>
+            
+            <div class="code-block">
+                .wave-text-8 {<br>
+                &nbsp;&nbsp;background: linear-gradient(90deg, #ff00cc, #3333ff, #00d4ff, #ff00cc);<br>
+                &nbsp;&nbsp;background-size: 400% 100%;<br>
+                &nbsp;&nbsp;animation: gradientMove 8s linear infinite;<br>
+                }
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Texto para os exemplos
+        const text = "ONDAS";
+        
+        // Função para criar texto com spans
+        function createWaveText(elementId, text, className) {
+            const element = document.getElementById(elementId);
+            element.innerHTML = '';
+            
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.setProperty('--i', i);
+                
+                if (className) {
+                    span.className = className;
+                }
+                
+                element.appendChild(span);
+            }
+        }
+        
+        // Aplicar a todos os exemplos
+        document.addEventListener('DOMContentLoaded', function() {
+            createWaveText('wave1', text);
+            createWaveText('wave2', text);
+            createWaveText('wave3', text);
+            createWaveText('wave5', text);
+            createWaveText('wave6', text);
+            createWaveText('wave7', text);
+            createWaveText('wave8', text);
+        });
+    </script>
+</body>
+</html>

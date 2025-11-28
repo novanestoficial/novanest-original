@@ -1,0 +1,197 @@
+:root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #E6A00B;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+    --cor10: #536aff;
+    --cor11: #ff0000;
+
+    /* SLIDE */
+    --bg: #111;
+    --card-bg: #1b1b1b;
+    --gap: 2px;
+
+
+    --cor-fundo: #161516;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+    --cor-borda2: #c5c5c5c5;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+
+/* PARTE DE PRODUTOS SLIDE */
+
+.carrossel-wrap {
+    height: 100%;
+    width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0px;
+    position: relative;
+    top: -650px;
+    margin-left: -15%!important;
+}
+
+.carrossel-produtos {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    box-sizing: border-box;
+}
+
+.viewport {
+    width: 100%;
+    overflow: visible;
+    box-sizing: border-box;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: cente9r;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    transition: transform 600ms cubic-bezier(.2, .9, .2, 1);
+    will-change: transform;
+}
+
+.product-slide {
+    text-align: center;
+    flex: 0 0 calc(15% - 120px) !important;
+    /* MUDE DE 25% PARA 20% */
+    min-width: calc(18% - 12px) !important;
+    /* O RESTO DO CÓDIGO PERMANECE EXATAMENTE IGUAL */
+    border-radius: 10px;
+    padding: 12.5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    left: 10%;
+}
+
+.product-slide:hover {
+    transition: 0.2s ease;
+    background-color: #6b6b6b41;
+}
+
+.product-slide.hidden {
+    display: none;
+}
+
+.product-slide.active {
+    width: 225px;
+    z-index: 40;
+    ;
+}
+
+.product-slide.next {
+    transform: scale(1);
+    z-index: 30;
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #000;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--cor-1);
+}
+
+.product-description {
+    color: #cfcfcf;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #ff4d4d;
+}
+
+.indicadores {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+.indicadores div {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fafafa;
+    cursor: pointer;
+    transition: transform .15s;
+    position: relative;
+    left: 32.5%;
+    margin-top: 50px;
+
+}
+
+.indicadores div.ativo {
+    background: var(--cor11);
+    transform: scale(1.4);
+}
+
+
+/* === EFEITO DE DESLIZE (NOVO) === */
+.product-slide.entering {
+    opacity: 0;
+    transform: translateX(40px) scale(0.8);
+}
+
+.product-slide.entering.entering-active {
+    opacity: 1;
+    transform: translateX(0px) scale(1.05);
+}
+
+.line-title {
+    font-family: var(--fonte-destaque);
+    font-weight: 700;
+    position: relative;
+    top: -100px;
+    left: 350px;
+    font-size: 1.2em;
+    margin-top: 60px;
+    color: white;
+}
+
+.produtos-linha-2 {
+    position: relative;
+    top: -555px;
+}
+
+.produtos-linha-2>h2 {
+    position: relative;
+    top: -650px;
+}

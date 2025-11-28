@@ -1,0 +1,205 @@
+:root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #E6A00B;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+    --cor10: #536aff;
+    --cor11: #ff0000;
+    --cor12: #ff3a3a;
+
+    --paleta-site-1: #C4F2D0;
+    --paleta-site-2: #89E0A6;
+    --paleta-site-3: #00614A;
+    --paleta-site-4: #48048C;
+    --paleta-site-5: #8404D9;
+    --paleta-site-6: #7404BF;
+    --paleta-site-7: #460273;
+    --paleta-site-8: #0D0126;
+    --paleta-site-9: #001FE6;
+    --paleta-site-10: #000a47;
+
+    /* SLIDE */
+    --bg: #111;
+    --card-bg: #1b1b1b;
+    --gap: 100px;
+
+
+    --cor-fundo: #161516;
+    --cor-fundo2: #636363;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+@keyframes vibrate-pausado {
+
+    0%,
+    20% {
+        transform: translate(0, 0) rotate(0deg);
+        filter: blur(0px);
+    }
+
+    5% {
+        transform: translate(2px, 2px) rotate(0.5deg);
+        filter: blur(0.5px);
+    }
+
+    10% {
+        transform: translate(-2px, -2px) rotate(-0.5deg);
+        filter: blur(0.3px);
+    }
+
+    15% {
+        transform: translate(2px, -2px) rotate(0.3deg);
+        filter: blur(0.4px);
+    }
+
+    /* Pausa de 20% a 100% */
+    25%,
+    45% {
+        transform: translate(0, 0) rotate(0deg);
+        filter: blur(0px);
+    }
+
+    30% {
+        transform: translate(-1px, 1px) rotate(-0.3deg);
+        filter: blur(0.5px);
+    }
+
+    35% {
+        transform: translate(1px, -1px) rotate(0.4deg);
+        filter: blur(0.3px);
+    }
+
+    40% {
+        transform: translate(-0.5px, -0.5px) rotate(-0.2deg);
+        filter: blur(0.4px);
+    }
+
+    /* Pausa de 45% a 100% */
+    50%,
+    70% {
+        transform: translate(0, 0) rotate(0deg);
+        filter: blur(0px);
+    }
+
+    55% {
+        transform: translate(0.5px, 0.5px) rotate(0.2deg);
+        filter: blur(0.5px);
+    }
+
+    60% {
+        transform: translate(-0.5px, 0.5px) rotate(-0.3deg);
+        filter: blur(0.3px);
+    }
+
+    65% {
+        transform: translate(1px, -1px) rotate(0.4deg);
+        filter: blur(0.4px);
+    }
+
+    /* Pausa final */
+    75%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        filter: blur(0px);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+html,
+body {
+
+    overflow-x: hidden;
+    /* bloqueia rolagem horizontal */
+    overflow-y: auto;
+    /* permite rolar para cima/baixo */
+    scroll-behavior: smooth;
+
+    height: 100%;
+    margin: 0;
+    background: var(--cor-fundo);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+
+header {
+    width: 100% !important;
+    height: 100px;
+}
+
+main {
+    height: 1550px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* força o link do card a herdar o estilo e remover sublinhado */
+.product-slide>a,
+.product-slide>a:link,
+.product-slide>a:visited,
+.product-slide>a:hover,
+.product-slide>a:focus {
+    display: block;
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* garante que os textos internos também usem a cor correta */
+.product-slide>a .product-name,
+.product-slide>a .product-description,
+.product-slide>a .product-price,
+.product-slide>a * {
+
+    text-decoration: none !important;
+}
+
+
+.fa-pix {
+    animation: vibrate-pausado 0.3s linear infinite;
+    color: aqua;
+}
+
+.cart-button {
+    width: 33px;
+    padding: 7.5px;
+    background-color: var(--cor12);
+    border: none;
+}
+
+.cart-button:hover {
+background-color: var(--cor11);
+    border: none;
+    transition: 0.2s ease;
+}

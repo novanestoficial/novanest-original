@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVANEST</title>
+    <!--LOGO-->
+    <link rel="shortcut icon" href="../imagens/logos/logo-principal.png" type="imagens/logos/logo-principal.png">
+    <!--fim da logo-->
+
+    <!--links css-->
+    <!--Separando cada css de cada item-->
+    <link rel="stylesheet" href="../css/div-pasta-index/header.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/banners.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/desconto-title.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/produtos-carrosel.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/modal-produtos.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/modal-cart.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/pop-up-sucess.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/responsividade.css">
+    <link rel="stylesheet" href="../css/div-pasta-index/keyframes-animations.css">
+    <!--Fim da separação-->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=phone_enabled" />
+    <link rel="stylesheet" href="../css/login-icon.css">
+    <!--FIM DOS LINKS CSS-->
+</head>
+
+<body>
+
+
+    <header class="header">
+
+
+        <!-- MENU -->
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#">Calças</a></li>
+            <li><a href="#">Camisas</a></li>
+            <li><a href="#">Tenis</a></li>
+            <li><a href="#">Bonés</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Bermudas</a></li>
+            <li><a href="#">Conjuntos</a></li>
+            <li><a href="#">Moletom</a></li>
+            <li><a href="#">Relógios</a></li>
+            <li><a href="#">Cintos</a></li>
+            <li><a href="#">Perfumes</a></li>
+        </ul>
+
+        
+        <!-- FIM DO MENU -->
+
+
+        <!--BARRA DE PESQUISA, LOGIN E CARRINHO-->
+
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Pesquisar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+
+
+            <div class="login-icon-container">
+                <button class="login-icon icon-btn" id="loginIcon">
+                    <i class="fas fa-user"></i>
+                </button>
+
+                <div class="login-status" id="loginStatus"></div>
+            </div>
+
+
+
+
+            <div class="login-icon-container">
+                <button class="icon-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="badge-cart" id="cartBadge">0</div>
+                </button>
+
+               
+            </div>
+        </div>
+        </div>
+
+        <!--FIM DA ABA,LOGIN E CARRINHO-->
+
+    </header>
+
+
+    <!-- CARROSSEL -->
+    <div class="carrossel">
+        <div class="slides">
+            <picture>
+                <source media="(max-width: 500px)" srcset="../imagens/banners/promocoes/imagem-promocoes-pequena.png">
+                <source media="(max-width: 768px)" srcset="../imagens/banners/promocoes/imagem-promocoes-media.png">
+                <img src="../imagens/banners/promocoes/imagem-promocoes-grande.png" alt="Promoções">
+            </picture>
+
+           
+
+            <picture>
+                <source media="(max-width: 500px)" srcset="../imagens/banners/novidades/imagem-novidades-pequena.png">
+                <source media="(max-width: 768px)" srcset="../imagens/banners/novidades/imagem-novidades-media.png">
+                <img src="../imagens/banners/novidades/imagem-novidades-grande.png" alt="Novidades">
+            </picture>
+
+           
+
+        </div>
+
+        <div class="indicadores indicadores-slide-header">
+            <div class="ativo"></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--FIM DO CARROSSEL-->
+
+
+    <!--DESCONTO-->
+
+    <div class="fundo-6">
+        <h1 class="wave-text-6">
+            <sapan class="texto-6">Ganhe <strong>10%</strong> de desconto pagando no</sapan> <i><i
+                    class="fa-brands fa-pix"></i></i>
+            <sapan class="texto-6">!</sapan>
+        </h1>
+    </div>
+
+
+    <!--FIM DO DESCONTO-->
+
+
+
+
+
+    <main>
+        <!--MOLETOM DEMIM TEARS-->
+        <h2 class="line-title">Moletom Denim Tears</h2>
+        <div class="carrossel-wrap">
+            <div class="carrossel-produtos">
+                <div class="product-counter" id="productCounter">Carregando...</div>
+                <div class="viewport">
+                    <div class="slides" id="productsSlides"></div>
+                </div>
+
+                <div class="indicadores indicadores-mobile-products" id="productsIndicators"></div>
+            </div>
+        </div>
+
+
+        <!-- OUTRO PRODUTO (segundo carrossel) -->
+
+
+        <div class="produtos-linha-2">
+            <h2 class="line-title">Air Force 1 e Jordan 4</h2>
+            <div class="carrossel-wrap">
+                <div class="carrossel-produtos">
+                    <div class="product-counter" id="productCounter-2">Carregando...</div>
+
+                    <div class="viewport">
+                        <div class="slides" id="productsSlides-2"></div>
+                    </div>
+
+                    <div class="indicadores indicadores-mobile-products" id="productsIndicators-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MODAL DE PRODUTO-->
+        <div class="modal-overlay" id="productModalOverlay"></div>
+
+        <div class="product-modal" id="productModal">
+            <div class="modal-header">
+
+                <button class="close-modal" onclick="closeProductModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="product-modal-content">
+                    <div class="product-gallery">
+                        <img id="modalProductImage" src="" alt="Produto" class="main-image">
+                        <div class="thumbnail-container">
+                            <!-- Thumbnails serão inseridos via JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <h1 class="product-title" id="modalProductName">Nome do Produto</h1>
+
+                        <div class="product-price">
+                            <span class="preco-antigo" id="modalOldPrice">R$ 389,99</span>
+                            <span class="preco-novo" id="modalProductPrice">R$ 319,99 </span>
+                            <span class="discount-badge" id="modalDiscount">-18% OFF </span>
+                        </div>
+
+                        <p class="product-description" id="modalProductDescription">
+
+                        </p>
+
+                        <div class="size-selection">
+                            <div class="size-title">Selecione o tamanho:</div>
+                            <div class="size-options" id="sizeOptions">
+                                <!-- Opções de tamanho serão inseridas via JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="product-features">
+                            <ul class="features-list" id="productFeatures">
+                                <!-- Características serão inseridas via JavaScript -->
+                            </ul>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="buy-button buttons-modal" onclick="buyProduct()">
+                                <i class="fas fa-shopping-bag"></i>
+                                Comprar Agora
+                            </button>
+                            <button class="cart-button buttons-modal icon-cart-modal-product" onclick="addToCart()">
+                                <i class="fas fa-shopping-cart"></i>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL DO CARRINHO -->
+        <div class="cart-modal-overlay" id="cartModalOverlay"></div>
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-modal-header">
+                <h2><i class="fas fa-shopping-cart"></i> Seu Carrinho</h2>
+                <button class="close-cart-modal" id="closeCartModal">&times;</button>
+            </div>
+            <div class="cart-modal-content">
+                <div class="cart-modal-items" id="cartModalItems">
+                    <div class="cart-modal-empty">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Seu carrinho está vazio</h3>
+
+                        <button class="btn-start-shopping" onclick="closeCartModalFunc()">Começar a Comprar</button>
+                    </div>
+                </div>
+                <div class="cart-modal-footer">
+                    <div class="cart-modal-total">
+                        <span>Total:</span>
+                        <span id="cartModalTotal">R$ 0,00</span>
+                    </div>
+                    <div class="cart-modal-actions">
+                        <a href="checkout.html" class="btn-cart-modal btn-checkout">Finalizar Compra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--PO-UP ADICIONADO AO CARRINHO-->
+
+        <!-- POP-UP DE SUCESSO (Adicionado ao Carrinho) -->
+        <div id="successPopup" class="success-popup">
+            <div class="success-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="success-message">
+                    <h3>Adicionado ao Carrinho!</h3>
+                </div>
+                <button class="success-close" id="closeSuccessPopup">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!--Parte de funções da barra de pesquisa,e carrinho-->
+
+    <script>
+        // ===== SISTEMA DE CARRINHO UNIFICADO E FUNCIONAL =====
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sistema de Carrinho
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            window.currentProductInModal = null;
+
+
+            console.log('Iniciando sistema de carrinho...');
+
+            // Elementos do Carrinho
+            const cartBtn = document.getElementById('cartBtn');
+            const cartDropdown = document.getElementById('cartDropdown');
+            const closeCart = document.getElementById('closeCart');
+            const cartItems = document.getElementById('cartItems');
+            const cartBadge = document.getElementById('cartBadge');
+            const cartTotal = document.getElementById('cartTotal');
+
+            // Elementos do Modal do Carrinho
+            const cartModal = document.getElementById('cartModal');
+            const cartModalOverlay = document.getElementById('cartModalOverlay');
+            const closeCartModal = document.getElementById('closeCartModal');
+            const cartModalItems = document.getElementById('cartModalItems');
+            const cartModalTotal = document.getElementById('cartModalTotal');
+
+            // ===== FUNÇÕES DO CARRINHO =====
+            function updateCartUI() {
+                console.log('Atualizando UI do carrinho, itens:', cart.length);
+
+                // Atualizar badge
+                if (cartBadge) {
+                    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                    cartBadge.textContent = totalItems;
+                }
+
+
+
+                // Atualizar dropdown do carrinho
+                if (cartItems && cartTotal) {
+                    if (cart.length > 0) {
+                        let cartHTML = '';
+                        let total = 0;
+
+                        cart.forEach((item, index) => {
+                            const itemTotal = item.price * item.quantity;
+                            total += itemTotal;
+
+                            cartHTML += `
+                        <div class="cart-item">
+                            <div class="item-image">
+                                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                            </div>
+                            <div class="item-details">
+                                <div class="item-name">${item.name}</div>
+                                <div class="item-size">Tamanho: ${item.size}</div>
+                                <div class="item-price">R$ ${item.price.toFixed(2)}</div>
+                                <div class="item-quantity">
+                                    <button class="quantity-btn minus" data-index="${index}">-</button>
+                                    <span class="quantity">${item.quantity}</span>
+                                    <button class="quantity-btn plus" data-index="${index}">+</button>
+                                    <button class="remove-item" data-index="${index}">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                        });
+
+                        cartItems.innerHTML = cartHTML;
+                        cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+                    } else {
+                        cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Seu carrinho está vazio</p>
+                    </div>
+                `;
+                        cartTotal.textContent = 'R$ 0,00';
+                    }
+                }
+
+                // Atualizar modal do carrinho
+                updateCartModalUI();
+            }
+
+            function updateCartModalUI() {
+                if (!cartModalItems || !cartModalTotal) return;
+
+                if (cart.length > 0) {
+                    let cartHTML = '';
+                    let total = 0;
+
+                    cart.forEach((item, index) => {
+                        const itemTotal = item.price * item.quantity;
+                        total += itemTotal;
+
+                        cartHTML += `
+                    <div class="cart-modal-item">
+                        <div class="cart-modal-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-modal-item-details">
+                            <div class="cart-modal-item-name">${item.name}</div>
+                            <div class="cart-modal-item-size">Tamanho: ${item.size}</div>
+                            <div class="cart-modal-item-price">R$ ${item.price.toFixed(2)}</div>
+                            <div class="cart-modal-item-quantity">
+                                <button class="cart-modal-quantity-btn minus" onclick="updateQuantity(${index}, ${cart[index].quantity - 1})">-</button>
+                                <span class="cart-modal-quantity">${item.quantity}</span>
+                                <button class="cart-modal-quantity-btn plus" onclick="updateQuantity(${index}, ${cart[index].quantity + 1})">+</button>
+                                <button class="cart-modal-remove-item" onclick="removeFromCart(${index})">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                    });
+
+                    cartModalItems.innerHTML = cartHTML;
+                    cartModalTotal.textContent = 'R$ ' + total.toFixed(2);
+                } else {
+                    cartModalItems.innerHTML = `
+                <div class="cart-modal-empty">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Seu carrinho está vazio</h3>
+                    <button class="btn-start-shopping" onclick="closeCartModalFunc()">Começar a Comprar</button>
+                </div>
+            `;
+                    cartModalTotal.textContent = 'R$ 0,00';
+                }
+            }
+
+            // Atualizar quantidade do produto no carrinho
+            window.updateQuantity = function (index, newQuantity) {
+                if (newQuantity < 1) {
+                    removeFromCart(index);
+                    return;
+                }
+
+                cart[index].quantity = newQuantity;
+                saveCart();
+            };
+
+            // Remover produto do carrinho
+            window.removeFromCart = function (index) {
+                cart.splice(index, 1);
+                saveCart();
+            };
+
+            // Salvar carrinho no localStorage
+            function saveCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartUI();
+            }
+
+            // ===== FUNÇÃO GLOBAL PARA ADICIONAR PRODUTO AO CARRINHO =====
+            window.addProductToCart = function (product) {
+                console.log('Adicionando produto ao carrinho:', product);
+
+                // Verificar se o produto já está no carrinho (mesmo ID e mesmo tamanho)
+                const existingItemIndex = cart.findIndex(item =>
+                    item.id === product.id && item.size === product.size
+                );
+
+                if (existingItemIndex !== -1) {
+                    // Se já existe, aumenta a quantidade
+                    cart[existingItemIndex].quantity += 1;
+                    console.log('Produto existente, quantidade aumentada para:', cart[existingItemIndex].quantity);
+                } else {
+                    // Se não existe, adiciona novo item
+                    cart.push(product);
+                    console.log('Novo produto adicionado ao carrinho');
+                }
+
+                saveCart();
+                return true;
+            };
+
+            // ===== FUNÇÕES DO MODAL DO CARRINHO =====
+            function openCartModal() {
+                updateCartModalUI();
+                if (cartModal) cartModal.classList.add('active');
+                if (cartModalOverlay) cartModalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            window.closeCartModalFunc = function () {
+                if (cartModal) cartModal.classList.remove('active');
+                if (cartModalOverlay) cartModalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            };
+
+
+
+            // ===== FUNÇÕES GLOBAIS DO MODAL DE PRODUTO =====
+
+            window.openProductModal = function (product) {
+                console.log("PRODUTO RECEBIDO NO MODAL:", product);
+
+                if (!product || !product.id) {
+                    console.error("ERRO: produto enviado está vazio ou inválido!");
+                    return;
+                }
+
+                window.currentProductInModal = {
+                    id: product.id,
+                    name: product.nome || product.name,
+                    price: product.precoNovo || product.preco || product.price,
+                    image: product.imagem || product.image
+                };
+
+            };
+
+
+            window.addToCart = function () {
+                const selectedSize = document.querySelector('.size-option.selected');
+               
+
+
+
+
+                // Extrair valor numérico do preço
+                const priceText = window.currentProductInModal.precoNovo || '0';
+                const priceValue = parseFloat(priceText.replace('R$', '').replace(',', '.').replace(/[^\d.-]/g, '').trim());
+
+                const product = {
+                    id: window.currentProductInModal.id || `prod-${Date.now()}`,
+                    name: window.currentProductInModal.nome,
+                    price: isNaN(priceValue) ? 0 : priceValue,
+                    image: window.currentProductInModal.imagem,
+                    size: selectedSize.textContent,
+                    quantity: 1
+                };
+
+                console.log('Adicionando ao carrinho:', product);
+
+                // Usar a função global para adicionar ao carrinho
+                if (window.addProductToCart(product)) {
+                    // CORREÇÃO: Chama o pop-up corretamente
+                    showSuccessPopup('Produto adicionado ao carrinho!');
+                    window.closeProductModal();
+
+                    // Mostrar o carrinho após adicionar
+                    setTimeout(() => {
+                        openCartModal();
+                    }, 500);
+                }
+            };
+
+           
+            // ===== INICIALIZAÇÃO =====
+            // Inicializar o carrinho
+            updateCartUI();
+
+            // Event listeners do dropdown do carrinho
+            if (cartBtn && cartDropdown) {
+                console.log('Configurando eventos do carrinho...');
+
+                // Alternar a exibição do carrinho
+                cartBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    console.log('Botão do carrinho clicado - Abrindo dropdown');
+                    cartDropdown.classList.toggle('active');
+                });
+
+                // Fechar o carrinho
+                if (closeCart) {
+                    closeCart.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        console.log('Fechando carrinho');
+                        cartDropdown.classList.remove('active');
+                    });
+                }
+
+
+                // Prevenir que cliques dentro do carrinho fechem ele
+                cartDropdown.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+
+            // Event listeners do modal do carrinho
+            if (cartBtn && cartModal) {
+                cartBtn.addEventListener('click', openCartModal);
+            }
+
+            if (closeCartModal) {
+                closeCartModal.addEventListener('click', closeCartModalFunc);
+            }
+
+            if (cartModalOverlay) {
+                cartModalOverlay.addEventListener('click', closeCartModalFunc);
+            }
+
+            // Fechar modais com ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeCartModalFunc();
+                    if (window.closeProductModal) {
+                        window.closeProductModal();
+                    }
+                }
+            });
+
+            // Menu mobile (se existir)
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+
+            if (mobileMenuBtn && navMenu) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
+    <!--POP - UP DE PADICIONADO AO CARRINHO-->
+
+    <script>
+        // POP-UP DE SUCESSO - VERSÃO OTIMIZADA
+        function showSuccessPopup(message = 'Adicionado ao carrinho!') {
+            const popup = document.getElementById('successPopup');
+
+            if (!popup) {
+                console.error('Elemento successPopup não encontrado!');
+                return false;
+            }
+
+            // Atualiza a mensagem se fornecida
+            const titleElement = popup.querySelector('.success-message h3');
+            if (titleElement) {
+                titleElement.textContent = message;
+            }
+
+            // Mostra o pop-up
+            popup.classList.add('show');
+
+            console.log('Pop-up de sucesso mostrado:', message);
+
+            // Auto-fechar após 3 segundos
+            setTimeout(() => {
+                hideSuccessPopup();
+            }, 3000);
+
+            return true;
+        }
+
+        function hideSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            if (popup) {
+                popup.classList.remove('show');
+            }
+        }
+
+        // Inicialização correta do pop-up
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeBtn = document.getElementById('closeSuccessPopup');
+            const popup = document.getElementById('successPopup');
+
+            // Event listener para fechar
+            if (closeBtn) {
+                closeBtn.addEventListener('click', hideSuccessPopup);
+            }
+
+            // Fechar ao clicar fora (opcional)
+            if (popup) {
+                popup.addEventListener('click', function (e) {
+                    if (e.target === popup) {
+                        hideSuccessPopup();
+                    }
+                });
+            }
+
+            // Teste: descoment a linha abaixo para testar o pop-up
+            // setTimeout(() => showSuccessPopup(), 1000);
+        });
+    </script>
+
+
+    <!--Parte De LOGIN ICON-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Carrega o usuário salvo no navegador
+            let user = JSON.parse(localStorage.getItem("user")) || { logged: false };
+
+            const icon = document.getElementById("loginIcon");
+            const statusBox = document.getElementById("loginStatus");
+
+            function updateStatus() {
+                if (user.logged) {
+                    // ---- Usuário logado ----
+                    statusBox.innerHTML = `
+                <div class="status-header logged-in">
+                    <div class="status-icon"><i class="fas fa-check"></i></div>
+                    <div>
+                        <h3 class="logado">Logado</h3>
+                        <p class= "email-login">${user.email}</p>
+                    </div>
+                </div>
+
+                <div class="user-info">
+                    <p><strong>Nome:</strong> ${user.nome}</p>
+                </div>
+
+                <button class="btn btn-logout" id="logoutBtn">Sair</button>
+            `;
+
+                    // Botão de sair
+                    document.getElementById("logoutBtn").onclick = () => {
+                        localStorage.removeItem("user");
+                        user = { logged: false };
+                        updateStatus();
+                        statusBox.classList.remove("active");
+                    };
+
+                } else {
+                    // ---- Usuário NÃO logado ----
+                    statusBox.innerHTML = `
+                <div class="status-header logged-out">
+                    <div class="status-icon"><i class="fas fa-times"></i></div>
+                    <div class="div-login">
+                        <h3>Desconectado</h3>
+                        <p>Você não está logado</p>
+                    </div>
+                </div>
+
+                <a href="login-page.html?tab=login">
+    <button class="btn btn-login">Fazer Login</button>
+</a>
+
+
+                <a href="login-page.html?tab=register">
+    <button class="btn btn-register">Cadastre-se</button>
+</a>
+
+
+
+            `;
+
+                    if (icon) {
+                        // Torna o ícone verde mostrando que está logado
+                        icon.style.backgroundColor = "#f44336";
+                        icon.style.color = "#fff";
+
+                        // Opcional: colocar um check no lugar do usuário
+                        icon.innerHTML = '<i class="fas fa-user"></i>';
+                    }
+                }
+            }
+
+            updateStatus();
+
+            // Abrir/fechar o status
+            icon.onclick = () => {
+                statusBox.classList.toggle("active");
+            };
+
+            // Fechar clicando fora
+            document.addEventListener("click", (e) => {
+                if (!icon.contains(e.target) && !statusBox.contains(e.target)) {
+                    statusBox.classList.remove("active");
+                }
+            });
+
+        });
+    </script>
+
+    <!--FIM DA PARTE DE LOGIN-->
+
+
+    <!--Atualiza a aba ao logar-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            if (user && user.logged === true) {
+
+                const icon = document.getElementById("loginIcon");
+
+                if (icon) {
+                    // Torna o ícone verde mostrando que está logado
+                    icon.style.backgroundColor = "#black";
+                    icon.style.color = "#black";
+
+                    // Opcional: colocar um check no lugar do usuário
+                    icon.innerHTML = '<i class="fas fa-user"></i>';
+                }
+            }
+
+        });
+    </script>
+
+    <!--FIM DA PARTE DE ATUALIZAÇÃO DE LOGIN-->
+
+
+    <!--Parte dos SLIDES produtos-->
+
+    <script>
+        document.querySelectorAll('.carrossel').forEach((carrossel) => {
+
+            const faixa = carrossel.querySelector('.slides');
+            const indicadoresContainer = carrossel.querySelector('.indicadores');
+            if (!faixa || !indicadoresContainer) return;
+
+            const items = Array.from(faixa.children);
+            const itensPorVez = 5; // MOSTRAR 4 PRODUTOS
+            const totalSlides = Math.ceil(items.length / itensPorVez);
+
+            // Criar indicadores
+            indicadoresContainer.innerHTML = "";
+            for (let i = 1; i < totalSlides; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("dot");
+                if (i === 0) dot.classList.add("ativo");
+                indicadoresContainer.appendChild(dot);
+            }
+
+            const dots = Array.from(indicadoresContainer.children);
+
+            let index = 0;
+            let intervalo;
+            let tempoTroca = 5000;
+
+            // --- CORRIGIDO: CÁLCULO CERTO DO TRANSLATE ---
+            function aplicarTransform() {
+                faixa.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle("ativo", i === index));
+            }
+
+            // auto-play
+            function iniciarIntervalo() {
+                clearInterval(intervalo);
+                intervalo = setInterval(() => {
+                    index = (index + 1) % totalSlides;
+                    aplicarTransform();
+                }, tempoTroca);
+            }
+
+            aplicarTransform();
+            iniciarIntervalo();
+
+            // Clique nos indicadores
+            dots.forEach((bolinha, i) => {
+                bolinha.addEventListener("click", () => {
+                    index = i; // <-- CORRIGIDO: AGORA ATIVA A CERTA
+                    aplicarTransform();
+                    iniciarIntervalo();
+                });
+            });
+
+            // swipe mobile
+            let startX = 0;
+            let isDragging = false;
+
+            faixa.addEventListener("touchstart", (e) => {
+                clearInterval(intervalo);
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+
+            faixa.addEventListener("touchmove", (e) => {
+                if (!isDragging) return;
+                const delta = e.touches[0].clientX - startX;
+                faixa.style.transition = "none";
+                faixa.style.transform = `translateX(${-(index * 100) + (delta / carrossel.clientWidth) * 100}%)`;
+            });
+
+            faixa.addEventListener("touchend", (e) => {
+                if (!isDragging) return;
+                const diff = e.changedTouches[0].clientX - startX;
+                faixa.style.transition = "";
+
+                if (Math.abs(diff) > 50) {
+                    if (diff < 0) index = Math.min(index + 1, totalSlides - 1);
+                    else index = Math.max(index - 1, 0);
+                }
+
+                aplicarTransform();
+                iniciarIntervalo();
+                isDragging = false;
+            });
+
+            window.addEventListener("resize", aplicarTransform);
+
+        });
+    </script>
+
+
+    <!--FIM DO SLIDE produtos-->
+
+    <!-- Banco de Dados-->
+
+    <!--PRODUTOS SLIDE - CADA FILA-->
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "SUA_API_KEY",
+            authDomain: "loja-roupas-bb4bd.firebaseapp.com",
+            databaseURL: "https://loja-roupas-bb4bd-default-rtdb.firebaseio.com/",
+            projectId: "loja-roupas-bb4bd",
+            storageBucket: "loja-roupas-bb4bd.appspot.com",
+            messagingSenderId: "SEU_ID",
+            appId: "SEU_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+
+
+
+
+        // Função para atualizar a interface do carrinho
+        function updateCartUI() {
+            const cartBadge = document.getElementById('cartBadge');
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+
+            if (!cartBadge || !cartItems || !cartTotal) return;
+
+            // Atualizar badge
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartBadge.textContent = totalItems;
+
+            // Atualizar itens do carrinho
+            if (cart.length > 0) {
+                let cartHTML = '';
+                let total = 0;
+
+                cart.forEach((item, index) => {
+                    const itemTotal = parseFloat(item.price) * item.quantity;
+                    total += itemTotal;
+
+                    cartHTML += `
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-size">Tamanho: ${item.size}</div>
+                            <div class="item-price">R$ ${parseFloat(item.price).toFixed(2)}</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus" data-index="${index}">-</button>
+                                <span class="quantity">${item.quantity}</span>
+                                <button class="quantity-btn plus" data-index="${index}">+</button>
+                                <button class="remove-item" data-index="${index}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                });
+
+                cartItems.innerHTML = cartHTML;
+                cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+            } else {
+                cartItems.innerHTML = `
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Seu carrinho está vazio</p>
+                </div>
+            `;
+                cartTotal.textContent = 'R$ 0,00';
+            }
+
+            // Adicionar eventos aos botões do carrinho
+            document.querySelectorAll('.quantity-btn.minus').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, cart[index].quantity - 1);
+                });
+            });
+
+            document.querySelectorAll('.quantity-btn.plus').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    updateQuantity(index, cart[index].quantity + 1);
+                });
+            });
+
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    removeFromCart(index);
+                });
+            });
+        }
+
+        // Função para adicionar produto ao carrinho
+        function addToCartFromModal() {
+            if (!currentProductInModal) {
+                alert('Erro: Produto não encontrado!');
+                return;
+            }
+
+            const selectedSize = document.querySelector('.size-option.selected');
+            if (!selectedSize) {
+                function showSuccessPopup(message = 'Adicionado ao carrinho!') {
+                    const popup = document.getElementById('successPopup');
+                }
+            }
+
+            const product = {
+                id: currentProductInModal.id,
+                name: currentProductInModal.nome,
+                price: parseFloat(currentProductInModal.precoNovo.replace('R$ ', '').replace(',', '.').replace(/[^\d.-]/g, '')),
+                image: currentProductInModal.imagem,
+                size: selectedSize.textContent,
+                quantity: 1
+            };
+
+            // Verificar se o produto já está no carrinho (mesmo ID e mesmo tamanho)
+            const existingItemIndex = cart.findIndex(item =>
+                item.id === product.id && item.size === product.size
+            );
+
+            if (existingItemIndex !== -1) {
+                // Se já existe, aumenta a quantidade
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                // Se não existe, adiciona novo item
+                cart.push(product);
+            }
+
+            saveCart();
+
+            // Mostrar mensagem de sucesso
+            alert(`${product.name} - Tamanho: ${product.size} adicionado ao carrinho!`);
+
+            // Mostrar o carrinho dropdown
+            const cartDropdown = document.getElementById('cartDropdown');
+            if (cartDropdown) {
+                cartDropdown.classList.add('active');
+            }
+
+            window.closeProductModal();
+        }
+
+        // Função para atualizar quantidade
+        function updateQuantity(index, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(index);
+                return;
+            }
+
+            cart[index].quantity = newQuantity;
+            saveCart();
+        }
+
+        // Função para remover item do carrinho
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            saveCart();
+        }
+
+        // ===== FUNÇÕES GLOBAIS DO MODAL =====
+        window.closeProductModal = function () {
+            document.getElementById('productModal').style.display = 'none';
+            document.getElementById('productModalOverlay').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            currentProductInModal = null;
+        };
+
+        window.buyProduct = function () {
+            const selectedSize = document.querySelector('.size-option.selected');
+            if (!selectedSize) {
+                function showSuccessPopup(message = 'Adicionado ao carrinho!') {
+                    const popup = document.getElementById('successPopup');
+                }
+            }
+            alert('Redirecionando para finalização de compra...');
+            window.closeProductModal();
+        };
+
+        window.addToCart = function () {
+            const selectedSize = document.querySelector('.size-option.selected');
+            if (!selectedSize) {
+                alert('Por favor, selecione um tamanho!');
+                return;
+            }
+
+            if (!window.currentProductInModal) {
+                alert('Erro: Produto não encontrado!');
+                return;
+            }
+
+            // Extrair apenas o valor numérico do preço
+            const priceText = window.currentProductInModal.precoNovo || '0';
+            const priceValue = parseFloat(priceText.replace('R$', '').replace(',', '.').replace(/[^\d.-]/g, '').trim());
+
+            const product = {
+                id: window.currentProductInModal.id,
+                name: window.currentProductInModal.nome,
+                price: isNaN(priceValue) ? 0 : priceValue,
+                image: window.currentProductInModal.imagem,
+                size: selectedSize.textContent,
+                quantity: 1
+            };
+
+            console.log('Produto preparado para carrinho:', product);
+
+            // Usar a função global para adicionar ao carrinho
+            if (window.addProductToCart) {
+                window.addProductToCart(product);
+                alert(`${product.name} - Tamanho: ${product.size} adicionado ao carrinho!`);
+                window.closeProductModal();
+            } else {
+                alert('Erro: Sistema de carrinho não disponível!');
+                console.error('addProductToCart não encontrado');
+            }
+        };
+        // ===== FUNÇÃO PRINCIPAL CORRIGIDA PARA ABRIR MODAL =====
+        window.openProductModalFromData = function (productIndex, carouselId) {
+            console.log('Tentando abrir modal - Índice:', productIndex, 'Carrossel:', carouselId);
+
+            let products;
+
+            // Seleciona o carrossel correto baseado no ID
+            if (carouselId === 'carousel1') {
+                products = window.carouselProducts1;
+            } else if (carouselId === 'carousel2') {
+                products = window.carouselProducts2;
+            } else {
+                console.error('Carrossel não identificado:', carouselId);
+                return;
+            }
+
+            if (!products || !products[productIndex]) {
+                console.error('Produto não encontrado:', productIndex, 'no carrossel:', carouselId);
+                console.log('Produtos disponíveis:', products);
+                return;
+            }
+
+            const product = products[productIndex];
+            currentProductInModal = { ...product, id: product.id || `prod-${carouselId}-${productIndex}` };
+
+            console.log('Abrindo produto:', product.nome, 'do carrossel:', carouselId);
+
+            // Preencher informações do produto
+            document.getElementById('modalProductName').textContent = product.nome || 'Produto';
+            document.getElementById('modalProductPrice').textContent = product.precoNovo || 'R$ 0,00';
+
+            // Tratar preço antigo
+            const oldPriceElement = document.getElementById('modalOldPrice');
+            if (product.precoAntigo) {
+                oldPriceElement.textContent = product.precoAntigo;
+                oldPriceElement.style.display = 'inline';
+            } else {
+                oldPriceElement.style.display = 'none';
+            }
+
+            document.getElementById('modalProductDescription').textContent = product.descricao || '';
+
+            // Calcular e mostrar desconto se houver preço antigo
+            const discountElement = document.getElementById('modalDiscount');
+            if (product.precoAntigo && product.precoNovo) {
+                try {
+                    const priceOld = parseFloat(product.precoAntigo.replace('R$ ', '').replace(',', '.').replace(/[^\d.-]/g, ''));
+                    const priceNew = parseFloat(product.precoNovo.replace('R$ ', '').replace(',', '.').replace(/[^\d.-]/g, ''));
+
+                    if (!isNaN(priceOld) && !isNaN(priceNew) && priceOld > 0) {
+                        const discount = ((priceOld - priceNew) / priceOld * 100).toFixed(0);
+                        discountElement.textContent = `-${discount}% OFF`;
+                        discountElement.style.display = 'block';
+                    } else {
+                        discountElement.style.display = 'none';
+                    }
+                } catch (e) {
+                    discountElement.style.display = 'none';
+                }
+            } else {
+                discountElement.style.display = 'none';
+            }
+
+            // Carregar imagens
+            const mainImage = document.getElementById('modalProductImage');
+            const thumbnailContainer = document.querySelector('.thumbnail-container');
+            thumbnailContainer.innerHTML = '';
+
+            // Se tiver múltiplas imagens, use-as, senão use a imagem principal
+            if (product.imagens && Array.isArray(product.imagens) && product.imagens.length > 0) {
+                // Usar array de imagens do produto
+                mainImage.src = product.imagens[0];
+
+                product.imagens.forEach((image, index) => {
+                    if (image) {
+                        const thumbnail = document.createElement('img');
+                        thumbnail.src = image;
+                        thumbnail.alt = `Miniatura ${index + 1}`;
+                        thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                        thumbnail.onclick = () => {
+                            mainImage.src = image;
+                            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+                            thumbnail.classList.add('active');
+                        };
+                        thumbnailContainer.appendChild(thumbnail);
+                    }
+                });
+            } else if (product.imagem) {
+                // Usar apenas a imagem principal
+                mainImage.src = product.imagem;
+
+                const thumbnail = document.createElement('img');
+                thumbnail.src = product.imagem;
+                thumbnail.alt = 'Miniatura do produto';
+                thumbnail.className = 'thumbnail active';
+                thumbnail.onclick = () => {
+                    mainImage.src = product.imagem;
+                    document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+                    thumbnail.classList.add('active');
+                };
+                thumbnailContainer.appendChild(thumbnail);
+            } else {
+                // Imagem padrão caso não tenha
+                mainImage.src = 'https://via.placeholder.com/600x600/CCCCCC/FFFFFF?text=Imagem+Indisponível';
+            }
+
+            // Carregar tamanhos
+            const sizeOptions = document.getElementById('sizeOptions');
+            sizeOptions.innerHTML = '';
+
+            const sizes = product.tamanhos || ['P', 'M', 'G', 'GG'];
+            sizes.forEach(size => {
+                const sizeOption = document.createElement('div');
+                sizeOption.className = 'size-option';
+                sizeOption.textContent = size;
+                sizeOption.onclick = () => {
+                    document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+                    sizeOption.classList.add('selected');
+                };
+                sizeOptions.appendChild(sizeOption);
+            });
+
+            // Selecionar primeiro tamanho por padrão
+            if (sizeOptions.firstChild) {
+                sizeOptions.firstChild.classList.add('selected');
+            }
+
+            // Carregar características
+            const featuresList = document.getElementById('productFeatures');
+            featuresList.innerHTML = '';
+
+            const features = product.caracteristicas || [
+                'Garantia do fabricante',
+                'Entrega rápida',
+            ];
+
+            features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+                featuresList.appendChild(li);
+            });
+
+            // Mostrar modal
+            document.getElementById('productModal').style.display = 'block';
+            document.getElementById('productModalOverlay').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        };
+
+        // ===== FUNÇÃO INIT CORRIGIDA PARA OS CARROSSÉIS =====
+        function initCarousel(productsSlidesId, productsIndicatorsId, productCounterId, firebasePath, carouselId) {
+            const productsSlides = document.getElementById(productsSlidesId);
+            const productsIndicators = document.getElementById(productsIndicatorsId);
+            const productCounter = document.getElementById(productCounterId);
+            const viewport = productsSlides.parentElement;
+
+            let currentProductIndex = 0;
+            const products = [];
+
+            function escapeHtml(str) {
+                if (!str) return '';
+                return String(str)
+                    .replaceAll('&', '&amp;')
+                    .replaceAll('<', '&lt;')
+                    .replaceAll('>', '&gt;')
+                    .replaceAll('"', '&quot;')
+                    .replaceAll("'", '&#039;');
+            }
+
+            function setCurrentProductSlide(index) {
+                currentProductIndex = index;
+                const slides = Array.from(productsSlides.children);
+                const dots = Array.from(productsIndicators.children);
+
+                slides.forEach(s => s.classList.remove("entering", "entering-active"));
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active', 'next', 'hidden');
+                    slide.style.display = '';
+
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.style.display = 'flex';
+                    } else if (i > index && i <= index + 3) {
+                        slide.classList.add('next');
+                        slide.style.display = 'flex';
+                    } else {
+                        slide.classList.add('hidden');
+                        slide.style.display = 'none';
+                    }
+                });
+
+                const enteringSlide = slides[index];
+                enteringSlide.classList.add("entering");
+                void enteringSlide.offsetWidth;
+                enteringSlide.classList.add("entering-active");
+
+                dots.forEach((d, i) => d.classList.toggle('ativo', i === index));
+
+                centerActiveSlide();
+
+                productCounter.textContent = `${index + 1} de ${products.length}`;
+            }
+
+            function centerActiveSlide() {
+                const active = productsSlides.querySelector('.product-slide.active');
+                if (!active) return;
+
+                const viewportWidth = viewport.offsetWidth;
+                const viewportCenter = viewportWidth / 2;
+
+                const slideLeft = active.offsetLeft;
+                const slideWidth = active.offsetWidth;
+                const slideCenter = slideLeft + slideWidth / 2;
+
+                const diff = viewportCenter - slideCenter;
+
+                productsSlides.style.transform = `translateX(${diff}px)`;
+            }
+
+            function init(items) {
+                productsSlides.innerHTML = '';
+                productsIndicators.innerHTML = '';
+
+                items.forEach((p, i) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'product-slide';
+                    slide.dataset.index = i;
+
+                    // CORREÇÃO AQUI: Passando o carouselId corretamente para a função
+                    slide.innerHTML = `
+                    <div class="product-card" onclick="openProductModalFromData(${i}, '${carouselId}')">
+                        <img class="product-image" src="${p.imagem}" alt="${escapeHtml(p.nome)}" />
+                        <div class="product-name">${escapeHtml(p.nome)}</div>
+                        <div class="product-description">${escapeHtml(p.descricao || '')}</div>
+                        <div class="product-price">
+                            ${p.precoAntigo ? `<span style="text-decoration:line-through; color:#999; margin-right:8px;">${p.precoAntigo}</span>` : ''}
+                            <span><strong>${p.precoNovo || ''}</strong></span>
+                              <button class="cart-button " onclick="addToCart()">
+                                <i class="fas fa-shopping-cart"></i>
+
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                    productsSlides.appendChild(slide);
+                });
+
+                // Armazena os produtos com identificador único
+                if (carouselId === 'carousel1') {
+                    window.carouselProducts1 = items;
+                } else if (carouselId === 'carousel2') {
+                    window.carouselProducts2 = items;
+                }
+
+                items.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    if (i === 0) dot.classList.add('ativo');
+                    dot.addEventListener('click', () => setCurrentProductSlide(i));
+                    productsIndicators.appendChild(dot);
+                });
+
+                products.push(...items);
+                setCurrentProductSlide(0);
+
+                window.addEventListener('resize', () => {
+                    requestAnimationFrame(centerActiveSlide);
+                });
+            }
+
+            // Busca os dados do Firebase
+            const produtosRef = ref(db, firebasePath);
+            get(produtosRef)
+                .then(snapshot => {
+                    if (snapshot.exists()) {
+                        const data = snapshot.val();
+                        const lista = [];
+                        for (let id in data) lista.push({ id, ...data[id] });
+                        init(lista);
+                    } else {
+                        productCounter.textContent = 'Nenhum produto encontrado.';
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    productCounter.textContent = 'Erro ao carregar produtos.';
+                });
+        }
+
+        // ===== EVENT LISTENERS PARA O MODAL E CARRINHO =====
+        document.addEventListener('DOMContentLoaded', function () {
+            // Fechar modal ao clicar fora
+            const modalOverlay = document.getElementById('productModalOverlay');
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', window.closeProductModal);
+            }
+
+            // Fechar modal com ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    window.closeProductModal();
+                }
+            });
+
+            // Inicializar carrinho
+            updateCartUI();
+
+            // Sistema de carrinho dropdown
+            const cartBtn = document.getElementById('cartBtn');
+            const cartDropdown = document.getElementById('cartDropdown');
+            const closeCart = document.getElementById('closeCart');
+
+            if (cartBtn && cartDropdown && closeCart) {
+                // Alternar a exibição do carrinho
+                cartBtn.addEventListener('click', function () {
+                    cartDropdown.classList.toggle('active');
+                });
+
+                // Fechar o carrinho
+                closeCart.addEventListener('click', function () {
+                    cartDropdown.classList.remove('active');
+                });
+
+                // Fechar o carrinho ao clicar fora
+                document.addEventListener('click', function (event) {
+                    if (!cartBtn.contains(event.target) && !cartDropdown.contains(event.target)) {
+                        cartDropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // ===== INICIALIZAÇÃO DOS CARROSSÉIS =====
+
+        // Inicia o primeiro carrossel
+        initCarousel('productsSlides', 'productsIndicators', 'productCounter', 'produtos/Moletom Demim Tears', 'carousel1');
+
+        // Inicia o segundo carrossel  
+        initCarousel('productsSlides-2', 'productsIndicators-2', 'productCounter-2', 'produtos/Air-Force-e-Jordan-4', 'carousel2');
+    </script>
+
+
+    <!--FIM DO BANCO DE DADOS-->
+
+
+    <!--MENU MOBILE E SLIDES HEADER HIBRIDO-->
+
+    <script>
+        // Menu Mobile Hamburguer - FUNCIONANDO
+        document.addEventListener('DOMContentLoaded', function () {
+            // Cria o botão hamburguer
+            const menuToggle = document.createElement('button');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.id = 'mobileMenuBtn';
+            menuToggle.innerHTML = '<span></span><span></span><span></span>';
+
+            // Cria overlay
+            const menuOverlay = document.createElement('div');
+            menuOverlay.className = 'menu-overlay';
+
+            const header = document.querySelector('.header');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (header && navMenu) {
+                // Insere o menu hamburguer no header
+                header.insertBefore(menuToggle, navMenu);
+                document.body.appendChild(menuOverlay);
+
+                // Mostra/oculta menu no mobile
+                function toggleMenu() {
+                    navMenu.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    menuOverlay.classList.toggle('active');
+                    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+                }
+
+                menuToggle.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+
+                menuOverlay.addEventListener('click', function () {
+                    toggleMenu();
+                });
+
+                // Fechar menu ao clicar nos links
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        toggleMenu();
+                    });
+                });
+
+                // Fechar menu com ESC
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            }
+        });
+
+
+        //SLIDES HEADER MOBILE
+        document.querySelectorAll('.carrossel').forEach((carrossel) => {
+            const faixa = carrossel.querySelector('.slides'); // container flex
+            const indicadoresContainer = carrossel.querySelector('.indicadores');
+            if (!faixa || !indicadoresContainer) return;
+
+            const items = Array.from(faixa.children); // children podem ser <img> ou <picture>
+            const indicadores = Array.from(indicadoresContainer.children);
+
+            // se o número de indicadores não bater com o número de slides, recria-los
+            if (indicadores.length !== items.length) {
+                indicadoresContainer.innerHTML = '';
+                items.forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    if (i === 0) dot.classList.add('ativo');
+                    indicadoresContainer.appendChild(dot);
+                });
+            }
+
+            const dots = Array.from(indicadoresContainer.children);
+
+            let index = 0;
+            let tempoTroca = 5000; // tempo em ms — altere para o que quiser
+            let intervalo;
+
+            function aplicarTransform() {
+                // cada item ocupa 100% do carrossel; usaremos -index * 100%
+                faixa.style.transform = `translateX(${-index * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('ativo', i === index));
+            }
+
+            function iniciarIntervalo() {
+                clearInterval(intervalo);
+                intervalo = setInterval(() => {
+                    index = (index + 1) % items.length;
+                    aplicarTransform();
+                }, tempoTroca);
+            }
+
+            // inicializa
+            aplicarTransform();
+            iniciarIntervalo();
+
+            // clicar em bolinhas
+            dots.forEach((bolinha, i) => {
+                bolinha.addEventListener('click', () => {
+                    index = i;
+                    aplicarTransform();
+                    // reinicia o intervalo (pausa e recomeça)
+                    iniciarIntervalo();
+                });
+            });
+
+            // Optional: swipe touch (mobile) — implementa arrastar simples
+            let startX = 0;
+            let isDragging = false;
+            faixa.addEventListener('touchstart', (e) => {
+                clearInterval(intervalo);
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+            faixa.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const delta = e.touches[0].clientX - startX;
+                // movimenta provisoriamente para dar feedback (sem alterar index)
+                faixa.style.transition = 'none';
+                faixa.style.transform = `translateX(${-index * 100 + (delta / carrossel.clientWidth) * 100}%)`;
+            });
+            faixa.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                const endX = e.changedTouches[0].clientX;
+                const diff = endX - startX;
+                faixa.style.transition = ''; // restaura transição do CSS
+                if (Math.abs(diff) > 50) {
+                    if (diff < 0) index = (index + 1) % items.length; // swipe para esquerda -> próxima
+                    else index = (index - 1 + items.length) % items.length; // swipe para direita -> anterior
+                }
+                aplicarTransform();
+                isDragging = false;
+                iniciarIntervalo();
+            });
+
+            // redimensionamento: garante transform correto se tamanho mudar
+            window.addEventListener('resize', aplicarTransform);
+        });
+    </script>
+
+    <!-- INÍCIO DO RODAPÉ-->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="div-contato">
+                    <h3 class="contato">Contato</h3>
+                    <div class="contact-info">
+
+                        <div class="div-telefone-email">
+
+                            <p><i class="far fa-envelope"></i>novanestoficial10@gmail.com</p>
+                            <p class="telefone"> <svg class="icon-telefone" xmlns="http://www.w3.org/2000/svg"
+                                    height="24px" viewBox="0  -960 960 960" width="24px" fill="#ffff">
+                                    <path
+                                        d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" />
+                                </svg> +55 (31) 9 7152-1813</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <p>Fique por dentro das novidades, promoções e lançamentos seguindo nossas redes sociais.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/novanest_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        class="social-link" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@novanest_oficial?is_from_webapp=1&sender_device=pc"
+                        class="social-link tiktok" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Garantia e Direitos</h3>
+                <p>Todos os nossos produtos possuem garantia contra defeitos de fabricação. Consulte o prazo e condições
+                    específicas para cada produto.</p>
+                <div class="badges">
+                    <div class="badge">
+
+
+                    </div>
+                    <div class="badge">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2025 Nova Nest.</p>
+            </div>
+            <div class="legal-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Trocas</a>
+            </div>
+        </div>
+
+        <div class="footer-links-div">
+            <a class="links-footer" href="">Home</a>
+
+        </div>
+
+
+    </footer>
+    <!--FIM DO RODAPÉ-->
+</body>
+
+</html>

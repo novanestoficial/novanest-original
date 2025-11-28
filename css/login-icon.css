@@ -1,0 +1,174 @@
+
+:root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #E6A00B;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+    --cor10: #536aff;
+
+    --paleta-site-1: #C4F2D0;
+    --paleta-site-2: #89E0A6;
+    --paleta-site-3: #00614A;
+    --paleta-site-4: #48048C;
+    --paleta-site-5: #8404D9;
+    --paleta-site-6: #7404BF;
+    --paleta-site-7: #460273;
+    --paleta-site-8: #0D0126;
+    --paleta-site-9: #001FE6;
+    --paleta-site-10: #000a47;
+
+    /* SLIDE */
+    --bg: #111;
+    --card-bg: #1b1b1b;
+    --gap: 100px;
+
+
+    --cor-fundo: #161516;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+/* Status */
+.login-status {
+    border: 1px solid var(--cor-fundo2);
+    position: fixed;
+    top: 90px;
+    left: 1540px;
+    width: 0;
+    height: 0px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 280px;
+    height: 220px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.login-status.active {
+    display: block;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.status-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    font-size: 18px;
+   margin-top: 12px;
+
+}
+
+.logged-in .status-icon {
+    border-radius: 50%;
+padding: 11px;
+    background-color: rgb(108, 238, 108);
+    color: #ffffff;
+}
+
+.logged-out .status-icon {
+    background-color: var(--cor-fundo2);
+    color: #ffffff;
+}
+
+
+.btn {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-login {
+    background: var(--cor11);
+    color: #fff;
+}
+
+.btn-register {
+    background: var(--cor12);
+    color: #fff;
+}
+
+.btn-logout {
+    background: #f44336;
+    color: #ffffff;
+}
+
+.btn-login:hover, .btn-register:hover  {
+    background: var(--cor-fundo2);
+}
+
+
+
+.btn-logout:hover {
+    background: #d32f2f;
+}
+
+.user-info {
+    color: rgb(255, 255, 255);
+    background: var(--cor2);
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+
+.logado {
+    width: 65px;
+     border-bottom: 2px solid var(--cor-borda);
+    color: var(--cor-1);
+    position: relative;
+    left: 70px;
+}
+
+.email-login {
+    color: var(--cor-borda);
+    position: relative;
+    left: -20px;
+}
+
+.div-login>h3 {
+    border-bottom: 2px solid var(--cor-borda);
+    color: var(--cor-1);
+    position: absolute;
+    left: 75px;
+}
+
+.div-login>p {
+    color: var(--cor-1);
+    position: relative;
+    left: 20px;
+    margin-top: 40px;
+}

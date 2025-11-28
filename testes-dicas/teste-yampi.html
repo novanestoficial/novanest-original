@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste API Yampi</title>
+</head>
+<body>
+  <h1>Produtos Yampi</h1>
+  <pre id="resultado">Carregando...</pre>
+
+  <script>
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const URL = "https://api.yampi.io/v2/products";
+const TOKEN = "Hlq47sCKvOSv2w2aoaduhsM5uLjZdIHJtsXmwRmn";
+
+fetch(proxyUrl + URL, {
+  headers: {
+    "Hlq47sCKvOSv2w2aoaduhsM5uLjZdIHJtsXmwRmnsk_uIKQUapXem5Pc20uggs2emZOlTUPO0YVgFhUF": TOKEN,
+    "Origin": "https://suaorigem.com" // opcional, pode tentar remover
+  }
+})
+.then(response => {
+  if (!response.ok) throw new Error("Erro na requisição");
+  return response.json();
+})
+.then(data => {
+  document.getElementById("resultado").textContent = JSON.stringify(data, null, 2);
+})
+.catch(error => {
+  document.getElementById("resultado").textContent = "Erro: " + error.message;
+});
+
+  </script>
+</body>
+</html>

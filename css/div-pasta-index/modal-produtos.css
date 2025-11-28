@@ -1,0 +1,322 @@
+:root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #E6A00B;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+    --cor10: #536aff;
+    --cor11: #ff0000;
+    --cor12: #ff3a3a;
+
+    --paleta-site-1: #C4F2D0;
+    --paleta-site-2: #89E0A6;
+    --paleta-site-3: #00614A;
+    --paleta-site-4: #48048C;
+    --paleta-site-5: #8404D9;
+    --paleta-site-6: #7404BF;
+    --paleta-site-7: #460273;
+    --paleta-site-8: #0D0126;
+    --paleta-site-9: #001FE6;
+    --paleta-site-10: #000a47;
+
+    /* SLIDE */
+    --bg: #111;
+    --card-bg: #1b1b1b;
+    --gap: 100px;
+
+
+    --cor-fundo: #161516;
+    --cor-fundo2: #636363;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+/* MODAl - produtos INDEX */
+/* ESTILOS DO MODAL */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+.product-modal {
+    overflow: auto;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 850px;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    overflow: hidden;
+    animation: modalSlideIn 0.4s ease-out;
+}
+
+
+
+.modal-header {
+    background: var(--cor-fundo);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.close-modal {
+    background: var(--cor12);
+
+    border: none;
+    color: var(--cor-1);
+    font-size: 1.6rem;
+    width: 25px;
+    height: 20px;
+    padding-bottom: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 810px;
+    padding-bottom: 8px;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 0;
+    max-height: calc(90vh - 100px);
+    overflow: hidden;
+}
+
+.product-modal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.product-gallery {
+    background-color: var(--bg) !important;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image {
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    max-width: 100%;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+    opacity: 1;
+    border-color: #1a1a2e;
+    transform: scale(1.05);
+}
+
+.product-details {
+    border: 1px solid var(--cor-borda);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    line-height: 1.2;
+}
+
+.product-price {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.preco-antigo {
+    font-size: 1.2rem;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.preco-novo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff3d27;
+}
+
+.discount-badge {
+    background: linear-gradient(135deg, #ff3f2a, #fa2710);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+
+.size-selection {
+    margin: 0;
+}
+
+
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.size-option {
+    padding: 5px !important;
+    border: 1px solid #ddd !important;
+    color: rgb(255, 255, 255);
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    min-width: 38px !important;
+}
+
+.size-option:hover {
+    border-color: var(--cor11) !important;
+    transform: translateY(-2px);
+}
+
+.size-option.selected {
+    background-color: #ff0000 !important;
+    color: white;
+    border: none !important;
+}
+
+.product-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.buy-button {
+
+    background: var(--cor-2);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 0.7em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(26, 26, 46, 0.2);
+}
+
+.buy-button:hover {
+    background-color: rgb(31, 223, 31);
+    box-shadow: 0 8px 20px rgba(26, 26, 46, 0.3);
+}
+
+.cart-button {
+
+    color: var(--cor-1);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+}
+
+.icon-cart-modal-product {
+    width: 9.5% !important;
+    height: 30px;
+    padding: 9px !important;
+}
+
+.icon-cart-modal-product>i {
+    margin-top: 0px !important;
+}
+
+
+
+
+.product-features {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+}
+
+.features-list li i {
+    color: #2ecc71;
+    width: 20px;
+}

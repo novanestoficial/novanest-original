@@ -1,0 +1,286 @@
+ 
+ :root {
+    --cor-2: #000000;
+    --cor-1: #ffffff;
+
+
+    --cor1: #69358C;
+    --cor2: #220440;
+    --cor3: #0D0126;
+    --cor4: #F2CB05;
+    --cor4-5: #fff705;
+    --cor5: #F2B705;
+    --cor6: #E6A00B;
+    --cor7: #5BF5E8;
+    --cor8: #45B5FF;
+    --cor9: #001FE6;
+
+    --cor-fundo: #161516;
+    --cor-texto: #000000;
+    --cor-borda: #e0e0e0;
+
+    --fonte-padrao: "Roboto", sans-serif;
+    --fonte-destaque: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --fonte-menu: "Bebas Neue", sans-serif;
+}
+
+ 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+     .contato {
+        position: relative;
+        left: 160px;
+        top: 0;
+     }
+        
+        .content {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        footer {
+            background-color: var(--cor-2);
+            color: var(--cor2);
+            padding: 50px 20px 20px;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            max-width: 1341px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--cor-1);
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            left:  5vh;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--cor-1);
+        }
+        
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: var(--cor-1);
+            font-size: 0.95rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info i{
+            margin-right: 12px;
+            font-size: 1.2rem;
+            color: var(--cor-1);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0px;
+            margin-top: 25px;
+            position: relative;
+            left: 100px;
+        }
+        
+        .social-link {
+            position: relative;
+            left: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+             background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-link:hover {
+            background-color: #858585a6;
+            transform: translateY(-3px);
+        }
+        
+        .social-link i {
+            font-size: 1.2rem;
+            color: var(--cor-1);
+        }
+
+        .tiktok {
+            position: relative;
+            left: -140px;
+        }
+        
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .badge i {
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .legal-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .legal-links a {
+            color: var(--cor-1);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.85rem;
+        }
+        
+        .legal-links a:hover {
+            color: #fff;
+        }
+
+        .copyright > p { 
+color: var(--cor-1);
+font-weight: bold;
+        }
+
+        .div-telefone-email > p {
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .footer-section {
+                min-width: 100%;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .legal-links {
+                justify-content: center;
+            }
+        }
+
+    .fa-envelope {
+        position: relative;
+    }
+
+
+          .links-footer {
+  display: block;      /* Faz cada link ocupar uma linha inteira */
+  color: var(--cor1);         /* Cor do texto (pode mudar) */
+  text-decoration: none; /* Remove o sublinhado */
+  margin: 4px 0;       /* Espaçamento entre os links */
+  font-size: 24px;     /* Tamanho da fonte */
+}
+
+.links-footer:hover {
+  color: #ffffff;      /* Cor ao passar o mouse (opcional) */
+}
+
+.footer-links-div {
+position: relative;
+left: -300px;
+top: -275px;
+border-bottom: 2.5px solid white;
+width: 35px;
+}
+     
+footer {
+    height: 350px;
+}
+
+.div-telefone-email{
+
+    position: relative;
+    left: 150px;
+}
+
+    .div-contato {
+        position: relative;
+        left: -150px;
+    }
+
+    .icon-telefone {
+        margin: 0;
+        position: relative;
+        top: 5px;
+    }
+
+    .telefone {
+        margin: 0;
+        position: relative;
+    
+    }
+    .contact-info > p {
+        position: relative;
+      
+    }
+
+    .fa-envelope {
+        color: #3b82f6;
+    }
